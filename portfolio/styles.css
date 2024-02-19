@@ -1,0 +1,92 @@
+/* styles.css */
+
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f4f4f4;
+    margin: 0;
+    padding: 0;
+}
+
+header, footer {
+    background: linear-gradient(to right, #0c7ad4, #d20bae); /* Green gradient */
+    color: #fff;
+    padding: 20px;
+    text-align: center;
+    width: 100%;
+}
+
+.container {
+    max-width: 900px;
+    margin: 20px auto;
+    background-color: #fff;
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0px 4px 16px rgba(0, 0, 0, 0.1); /* Soft shadow */
+}
+
+.container h2 {
+    color: #333;
+    margin-bottom: 20px;
+    font-size: 28px; /* Larger font size */
+}
+
+.container p {
+    line-height: 1.6;
+    color: #666; /* Slightly darker text */
+}
+
+.container ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+.container ul li {
+    color: #666;
+    margin-bottom: 10px;
+}
+
+section {
+    margin-bottom: 30px;
+    border-bottom: 1px solid #eee; /* Divider between sections */
+    padding-bottom: 20px; /* Space below each section */
+}
+
+section:last-child {
+    border-bottom: none; /* Remove divider from last section */
+}
+
+section h3 {
+    margin-top: 20px;
+    color: #333;
+}
+
+a {
+    color: #007bff;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+a:hover {
+    color: #0056b3;
+}
+
+footer {
+    background: linear-gradient(to right, #0c7ad4, #d20bae); /* Green gradient */
+    color: #fff;
+    padding: 20px;
+    text-align: center;
+    width: 100%;
+}
+
+@media (max-width: 768px) {
+    .container {
+        padding: 20px;
+    }
+
+    .container h2 {
+        font-size: 24px; /* Adjusted font size for smaller screens */
+    }
+}
+
+
