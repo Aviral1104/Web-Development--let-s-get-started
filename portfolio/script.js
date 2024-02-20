@@ -1,27 +1,23 @@
-// script.js
-
-document.addEventListener("DOMContentLoaded", function() {
-    // Dropdown Menu Functionality
-    var dropdownBtn = document.querySelector(".dropbtn");
-    var dropdownContent = document.querySelector(".dropdown-content");
-    dropdownBtn.addEventListener("click", function() {
-        dropdownContent.classList.toggle("hidden");
+document.addEventListener("DOMContentLoaded", function () {
+    const headings = document.querySelectorAll("h2");
+    headings.forEach((heading) => {
+      heading.addEventListener("click", function () {
+        // Check if the card already exists
+        const cardExists = this.nextElementSibling && this.nextElementSibling.classList.contains("card");
+        if (!cardExists) {
+          // Create the card element
+          const card = document.createElement("div");
+          card.classList.add("card");
+          // Move the ul element to the card
+          const ulElement = this.nextElementSibling;
+          card.appendChild(ulElement);
+          // Insert the card after the heading
+          this.parentNode.insertBefore(card, this.nextElementSibling);
+        } else {
+          // Toggle the visibility of the card
+          this.nextElementSibling.classList.toggle("show");
+        }
+      });
     });
-    // Smooth Scroll to Section
-    var sectionLinks = document.querySelectorAll(".dropdown-content a");
-    sectionLinks.forEach(function(link) {
-        link.addEventListener("click", function(event) {
-            event.preventDefault();
-            var targetId = link.getAttribute("href").substring(1);
-            var targetSection = document.getElementById(targetId);
-            if (targetSection) {
-                targetSection.scrollIntoView({
-                    behavior: "smooth",
-                    block: "start"
-                });
-                dropdownContent.classList.add("hidden");
-            }
-        });
-    });
-});
+  });
 

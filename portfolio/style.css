@@ -88,3 +88,40 @@
 input[type="checkbox"] {
   display: none;
 }
+
+.card {
+  background: whitesmoke;
+  padding: 1rem;
+  border: 1px solid #0750e1;
+  border-radius: 0.25rem;
+}
+
+.card ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+.card ul li {
+  margin-bottom: 0.5rem;
+}
+
+.card ul ul {
+  display: none;
+  padding-left: 1rem;
+}
+
+.card ul ul.show {
+  display: block;
+}
+
+.card ul ul li {
+  margin-bottom: 0.25rem;
+}
+
+.card h2 {
+  cursor: pointer;
+}
+
+.card h2:hover {
+  color: #4158d0;
+}
